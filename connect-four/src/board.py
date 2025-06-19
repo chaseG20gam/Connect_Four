@@ -144,13 +144,19 @@ class Board: # define class Board
                 if self.insert_oponent_piece(column):
                     break
 
-    def cpu_normal_turn(): # cpu actually thinks whats doing, always gonna try to win or avoid you winning. (uses minimax algorithm)
-        pass
+    def cpu_normal_turn(self):
+        from minimax import get_best_move
+        best_column = get_best_move(self, max_depth=2)  # pass max_depth=2 for normal difficulty
+        return self.insert_oponent_piece(best_column)
 
-    def cpu_hard_turn(): # allegedly a challenge, cpus a couple turns ahead. look for more comlpex alorithms
-        pass
+
+    def cpu_hard_turn(self):
+        from minimax import get_best_move
+        best_column = get_best_move(self, max_depth=4)  # pass max_depth=4 for hard difficulty
+        return self.insert_oponent_piece(best_column)
     
     def check_win(self): # checks when four pieces of the same type are in a row and declares the winning piece (which declares a winner)
+
         # check horizontal
         for row in range(self.rows):
             for col in range(self.columns - 3):

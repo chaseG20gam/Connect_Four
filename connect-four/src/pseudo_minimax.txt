@@ -1,0 +1,26 @@
+function minimax(board, depth, isMaximizingPlayer):
+   # First, check if the game is over
+   if game is won:
+       return +10 if computer wins, -10 if human wins
+   if game is tied:
+       return 0
+
+   # If it's the computer's turn (maximizing)
+   if isMaximizingPlayer:
+       bestScore = -infinity
+       for each empty spot on board:
+           make the move
+           score = minimax(board, depth + 1, false)
+           undo the move
+           bestScore = max(score, bestScore)
+       return bestScore
+
+   # If it's the human's turn (minimizing)
+   else:
+       bestScore = +infinity
+       for each empty spot on board:
+           make the move
+           score = minimax(board, depth + 1, true)
+           undo the move
+           bestScore = min(score, bestScore)
+       return bestScore
