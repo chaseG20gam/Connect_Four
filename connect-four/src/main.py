@@ -21,17 +21,17 @@ def main(): # main game loop
                 board.draw() # show board state
                 if winner == board.player_piece: # checks if the piece that won is yours
                     print('You win!')
-                    log_game(player_name, game_diff, "win") # logger function call
+                    log_game(player_name, game_diff, "win", '0') # logger function call
                 else:
                     print('CPU wins...') # conditions to win met but not your piece, cpu wins
-                    log_game(player_name, game_diff, "loss")
+                    log_game(player_name, game_diff, "loss", '0')
                 game_over = True # halts the game
                 break
 
             if board.is_full(): # check if board is full
                 board.draw() # maybe a custom game over scene over the board in the future?
                 print("The board is full. It's a draw")
-                log_game(player_name, game_diff, "draw")
+                log_game(player_name, game_diff, "draw", '0')
                 game_over = True
                 break
             
@@ -44,10 +44,10 @@ def main(): # main game loop
                 board.draw()
                 if winner == board.player_piece:
                     print("You win!")
-                    log_game(player_name, game_diff, "win")
+                    log_game(player_name, game_diff, "win", '0')
                 else:
                     print('CPU wins...')
-                    log_game(player_name, game_diff, "loss")
+                    log_game(player_name, game_diff, "loss", '0')
                 game_over = True
                 break
 
@@ -65,17 +65,17 @@ def main(): # main game loop
                 board.draw()
                 if winner == board.player_piece:
                     print('You win!')
-                    log_game(player_name, game_diff, "win")
+                    log_game(player_name, game_diff, "win", '2')
                 else:
                     print('CPU wins...')
-                    log_game(player_name, game_diff, "loss")
+                    log_game(player_name, game_diff, "loss", '2')
                 game_over = True
                 break
 
             if board.is_full(): 
                 board.draw()
                 print("The board is full. It's a draw")
-                log_game(player_name, game_diff, "draw")
+                log_game(player_name, game_diff, "draw", '2')
                 game_over = True
                 break
             
@@ -89,10 +89,10 @@ def main(): # main game loop
                 board.draw()
                 if winner == board.player_piece:
                     print("You win!")
-                    log_game(player_name, game_diff, "win")
+                    log_game(player_name, game_diff, "win", '2')
                 else:
                     print('CPU wins...')
-                    log_game(player_name, game_diff, "loss")
+                    log_game(player_name, game_diff, "loss", '2')
                 game_over = True
                 break
 
@@ -111,17 +111,17 @@ def main(): # main game loop
                 board.draw() 
                 if winner == board.player_piece:
                     print('You win!')
-                    log_game(player_name, game_diff, "win")
+                    log_game(player_name, game_diff, "win", '4')
                 else:
                     print('CPU wins...')
-                    log_game(player_name, game_diff, "loss")
+                    log_game(player_name, game_diff, "loss", '4')
                 game_over = True 
                 break
 
             if board.is_full():
                 board.draw() 
                 print("The board is full. It's a draw")
-                log_game(player_name, game_diff, "draw")
+                log_game(player_name, game_diff, "draw", '4')
                 game_over = True
                 break
             
@@ -135,10 +135,10 @@ def main(): # main game loop
                 board.draw()
                 if winner == board.player_piece:
                     print("You win!")
-                    log_game(player_name, game_diff, "win")
+                    log_game(player_name, game_diff, "win", '4')
                 else:
                     print('CPU wins...')
-                    log_game(player_name, game_diff, "loss")
+                    log_game(player_name, game_diff, "loss", '4')
                 game_over = True
                 break
 

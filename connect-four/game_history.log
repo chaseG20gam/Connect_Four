@@ -1,1 +1,11 @@
 2025-06-19 15:39:24 | Player: Adria | Difficulty: easy | Result: win
+2025-06-19 23:16:35 | Player: Nina | Difficulty: easy | Result: win
+2025-06-19 23:21:44 | Player: Nina | Difficulty: normal | Result: win
+2025-06-19 23:25:58 | Player: adri | Difficulty: normal | Result: loss
+2025-06-19 23:27:22 | Player: nina | Difficulty: hard | Result: win
+2025-06-19 23:28:22 | Player: adria | Difficulty: normal | Result: win | Depth: 2
+2025-06-19 23:29:31 | Player: adri | Difficulty: hard | Result: loss | Depth: 4 # challenging, but doable
+2025-06-19 23:30:44 | Player: nina | Difficulty: hard | Result: win | Depth: 5 # testing with different depths and players, fice difficult but not imposible
+2025-06-19 23:32:59 | Player: nina | Difficulty: hard | Result: loss | Depth: 6 # six is unbeaten so far. though hard is meant to be four
+2025-06-19 23:37:56 | Player: nina | Difficulty: hard | Result: loss | Depth: 6
+2025-06-19 23:42:28 | Player: nina | Difficulty: hard | Result: loss | Depth: 6

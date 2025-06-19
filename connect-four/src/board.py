@@ -44,7 +44,7 @@ class Board: # define class Board
                 return True
         
         return False # if column is full
-    
+    # note to self: check duplicqted method
     def insert_oponent_piece(self, column): # insert rivals piece
         
         column = column -1 # 0-based adjustment
@@ -152,7 +152,7 @@ class Board: # define class Board
 
     def cpu_hard_turn(self):
         from minimax import get_best_move
-        best_column = get_best_move(self, max_depth=4)  # pass max_depth=4 for hard difficulty
+        best_column = get_best_move(self, max_depth=6)  # pass max_depth=4 for hard difficulty
         return self.insert_oponent_piece(best_column)
     
     def check_win(self): # checks when four pieces of the same type are in a row and declares the winning piece (which declares a winner)

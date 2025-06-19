@@ -9,9 +9,9 @@ arguments:
     difficulty: game difficulty (easy, normal, hard)
     esult: game outcome (win, loss, draw)
 """
-def log_game(player_name: str, difficulty: str, result: str):
+def log_game(player_name: str, difficulty: str, result: str, depth: str):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        log_entry = f'{timestamp} | Player: {player_name} | Difficulty: {difficulty} | Result: {result}\n'
+        log_entry = f'{timestamp} | Player: {player_name} | Difficulty: {difficulty} | Depth: {depth} | Result: {result}\n'
 
         try:
             with open('game_history.log', 'a') as log_file:
