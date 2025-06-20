@@ -2,9 +2,15 @@ import random
 
 class Board: # define class Board
 
-    empty_cell = '.'
-    player_piece = 'X'
-    oponent_piece = '0' # constants for pieces and cells
+    RED= '\x1b[31m' # color adding with ANSI
+    BLUE= '\x1b[34m'
+    YELLOW= '\x1b[33m'
+    GREEN= '\x1b[32m'
+    RESET= '\x1b[0m'
+    
+    empty_cell = RESET + '.'
+    player_piece = GREEN + 'X' + RESET
+    oponent_piece = RED + '0' + RESET # constants for pieces and cells
 
     def __init__(self):
         self.rows = 6 # define number of rows
@@ -44,14 +50,14 @@ class Board: # define class Board
                 return True
         
         return False # if column is full
-    # note to self: check duplicqted method
+
     def insert_oponent_piece(self, column): # insert rivals piece
         
         column = column -1 # 0-based adjustment
-        if column < 0 or column >= self.columns: # check if column is valid
+        if column < 0 or column >= self.columns:
             return False
             
-        for row in range(self.rows -1, -1, -1): # iterate from bottom to top
+        for row in range(self.rows -1, -1, -1):
             if self.board[row][column] == self.empty_cell:
                 self.board[row][column] = self.oponent_piece
                 return True
@@ -61,7 +67,7 @@ class Board: # define class Board
     def play_turn(self): # the whole logic to play a turn and place a piece 
         while True: 
             try:
-                column = int(input('Select a column (0-6): ')) # user input as int
+                column = int(input('Select a column (1-7): ')) # user input as int
                 
                 if column == 1: # check column input
                     if self.insert_piece(column): # put the piece at the selected column
@@ -101,6 +107,7 @@ class Board: # define class Board
 
                 elif column == 7:
                     if self.insert_piece(column):
+                        print('\x1b[0m')
                         break
                     else:
                         print('Column is full. Try another column')
@@ -143,7 +150,8 @@ class Board: # define class Board
             elif column == 7:
                 if self.insert_oponent_piece(column):
                     break
-
+    
+    # AI intelligence handling
     def cpu_normal_turn(self):
         from minimax import get_best_move
         best_column = get_best_move(self, max_depth=2)  # pass max_depth=2 for normal difficulty
@@ -151,6 +159,11 @@ class Board: # define class Board
 
 
     def cpu_hard_turn(self):
+        from minimax import get_best_move
+        best_column = get_best_move(self, max_depth=4)  # pass max_depth=4 for hard difficulty
+        return self.insert_oponent_piece(best_column)
+    
+    def cpu_insane_turn(self):
         from minimax import get_best_move
         best_column = get_best_move(self, max_depth=6)  # pass max_depth=4 for hard difficulty
         return self.insert_oponent_piece(best_column)
@@ -160,7 +173,7 @@ class Board: # define class Board
         # check horizontal
         for row in range(self.rows):
             for col in range(self.columns - 3):
-                if (self.board[row][col] != '.' and
+                if (self.board[row][col] != self.empty_cell and
                     self.board[row][col] == self.board[row][col + 1] == 
                     self.board[row][col + 2] == self.board[row][col + 3]):
                     return True, self.board[row][col]  # returns win_found(true) and winning_piece(player)
@@ -168,25 +181,25 @@ class Board: # define class Board
         # check vertical
         for row in range(self.rows - 3):
             for col in range(self.columns):
-                if (self.board[row][col] != '.' and
+                if (self.board[row][col] != self.empty_cell and
                     self.board[row][col] == self.board[row + 1][col] == 
                     self.board[row + 2][col] == self.board[row + 3][col]):
                     winner = self.board[row][col]
                     return True, winner
 
-        # check diagonal (right to left)
+        # check diagonal (left to right)
         for row in range(3, self.rows):
             for col in range(self.columns - 3):
-                if (self.board[row][col] != '.' and
+                if (self.board[row][col] != self.empty_cell and
                     self.board[row][col] == self.board[row - 1][col + 1] ==
                     self.board[row - 2][col + 2] == self.board[row - 3][col + 3]):
                     winner = self.board[row][col]
                     return True, winner
 
-        # check diagonal (left ro right)
+        # check diagonal (right to left)
         for row in range(self.rows - 3):
             for col in range(self.columns - 3):
-                if (self.board[row][col] != '.' and
+                if (self.board[row][col] != self.empty_cell and
                     self.board[row][col] == self.board[row + 1][col + 1] ==
                     self.board[row + 2][col + 2] == self.board[row + 3][col + 3]):
                     winner = self.board[row][col]

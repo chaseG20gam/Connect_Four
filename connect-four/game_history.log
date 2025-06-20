@@ -1,11 +1,20 @@
-2025-06-19 15:39:24 | Player: Adria | Difficulty: easy | Result: win
-2025-06-19 23:16:35 | Player: Nina | Difficulty: easy | Result: win
-2025-06-19 23:21:44 | Player: Nina | Difficulty: normal | Result: win
-2025-06-19 23:25:58 | Player: adri | Difficulty: normal | Result: loss
-2025-06-19 23:27:22 | Player: nina | Difficulty: hard | Result: win
-2025-06-19 23:28:22 | Player: adria | Difficulty: normal | Result: win | Depth: 2
-2025-06-19 23:29:31 | Player: adri | Difficulty: hard | Result: loss | Depth: 4 # challenging, but doable
-2025-06-19 23:30:44 | Player: nina | Difficulty: hard | Result: win | Depth: 5 # testing with different depths and players, fice difficult but not imposible
-2025-06-19 23:32:59 | Player: nina | Difficulty: hard | Result: loss | Depth: 6 # six is unbeaten so far. though hard is meant to be four
-2025-06-19 23:37:56 | Player: nina | Difficulty: hard | Result: loss | Depth: 6
-2025-06-19 23:42:28 | Player: nina | Difficulty: hard | Result: loss | Depth: 6
+2025-06-19 15:39:24 | Player: Adria | Difficulty: easy | Depth: 0 | Result: win
+2025-06-19 23:16:35 | Player: Nina | Difficulty: easy | Depth: 0 | Result: win
+2025-06-19 23:21:44 | Player: Nina | Difficulty: normal Depth: 2 | Result: win 
+2025-06-19 23:25:58 | Player: adri | Difficulty: normal Depth: 2 | Result: win 
+2025-06-19 23:27:22 | Player: nina | Difficulty: hard | Depth: 4 | Result: win
+2025-06-19 23:28:22 | Player: adria | Difficulty: normal | Depth: 2 | Result: win 
+2025-06-19 23:29:31 | Player: adri | Difficulty: hard | Depth: 4 | Result: loss 
+2025-06-19 23:30:44 | Player: nina | Difficulty: hard | Depth: 5 | Result: win 
+2025-06-19 23:32:59 | Player: nina | Difficulty: insane | Depth: 6 | Result: loss
+2025-06-19 23:37:56 | Player: nina | Difficulty: hard | Depth: 6 | Result: loss
+2025-06-19 23:42:28 | Player: nina | Difficulty: hard | Depth: 6 | Result: loss 
+2025-06-20 11:44:30 | Player: Adria | Difficulty: normal | Depth: 2 | Result: loss
+2025-06-20 12:15:48 | Player: Adria | Difficulty: easy | Depth: 0 | Result: loss
+2025-06-20 12:31:34 | Player: Adria | Difficulty: easy | Depth: 0 | Result: loss
+2025-06-20 12:36:46 | Player: adria | Difficulty: easy | Depth: 0 | Result: loss
+2025-06-20 12:44:49 | Player: adria | Difficulty: normal | Depth: 2 | Result: loss
+2025-06-20 12:48:44 | Player: adria | Difficulty: easy | Depth: 0 | Result: win
+2025-06-20 12:49:34 | Player: adria | Difficulty: easy | Depth: 0 | Result: win
+2025-06-20 12:53:23 | Player: adria | Difficulty: easy | Depth: 0 | Result: win
+2025-06-20 13:02:50 | Player: adria | Difficulty: easy | Depth: 0 | Result: win

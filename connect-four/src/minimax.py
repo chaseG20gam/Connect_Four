@@ -5,6 +5,11 @@ Using references from:
 - https://stackoverflow.com/questions/71187789/why-my-connect4-minimax-doesnt-work-properly
 - A.I. (Claude Sonet 3.5)
 
+Difficulty (after research and testing):
+- Depth: 4, challenging but doable. Makes mistakes sometimes. Exploitable
+- Depth: 5, very difficult, rarely makes mistakes. Not imposible, though might look like it is
+- Depth: 6, unbeaten so far. Noticeable way slower
+
 """
 
 def minimax(board, depth, is_maximizing, max_depth=0):  # added max_depth parameter to avoid infinite recursion and difficulty level management

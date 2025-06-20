@@ -1,3 +1,5 @@
+----reference file----
+
 function minimax(board, depth, isMaximizingPlayer):
    # First, check if the game is over
    if game is won:
