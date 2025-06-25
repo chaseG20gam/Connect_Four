@@ -3,7 +3,6 @@ Using references from:
 - https://www.datacamp.com/tutorial/minimax-algorithm-for-ai-in-python
 - https://roboticsproject.readthedocs.io/en/latest/ConnectFourAlgorithm.html
 - https://stackoverflow.com/questions/71187789/why-my-connect4-minimax-doesnt-work-properly
-- A.I. (Claude Sonet 3.5)
 
 Difficulty (after research and testing):
 - Depth: 4, challenging but doable. Makes mistakes sometimes. Exploitable
