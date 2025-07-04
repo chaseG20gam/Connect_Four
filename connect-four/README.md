@@ -22,7 +22,7 @@ A school project implementing the classic Connect Four game in Python, featuring
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/chaseG20gam/Evaluacio_continua_2
+    git clone https://github.com/chaseG20gam/Connect_Four
     cd connect-four
     ```
 
